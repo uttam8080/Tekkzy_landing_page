@@ -77,43 +77,47 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
           </motion.div>
         </div>
 
-        {/* RIGHT COLUMN: App Phone & Cupped Hand Showcase */}
+        {/* RIGHT COLUMN: Both Cupped Hand & App Phone Showcase */}
         <motion.div 
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="flex-1 flex items-center justify-center relative w-full max-w-md lg:max-w-xl"
+          className="flex-1 flex items-center justify-center relative w-full max-w-md lg:max-w-xl min-h-[380px] sm:min-h-[440px]"
         >
           {/* Ambient Glowing Backdrops */}
-          <div className="absolute w-[360px] h-[360px] bg-[#25D366]/25 rounded-full blur-[110px] pointer-events-none mix-blend-screen" />
-          <div className="absolute w-[280px] h-[280px] bg-[#D500F9]/30 rounded-full blur-[90px] pointer-events-none" />
+          <div className="absolute w-[340px] h-[340px] bg-[#25D366]/25 rounded-full blur-[100px] pointer-events-none mix-blend-screen" />
+          <div className="absolute w-[280px] h-[280px] bg-[#D500F9]/25 rounded-full blur-[90px] pointer-events-none" />
 
-          {/* Graphic Container with Hand and App Phone */}
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative z-10 w-full flex items-center justify-center pt-10"
-          >
-            {/* Cupped Hand */}
-            <img
-              src="/Cupped Hand.png"
-              alt="Cupped Hand Visual"
-              className="w-full max-w-[320px] sm:max-w-[400px] lg:max-w-[460px] h-auto object-contain drop-shadow-[0_25px_45px_rgba(37,211,102,0.25)]"
-            />
-
-            {/* App Phone Floating Above Hand */}
+          {/* Dual Graphic Showcase Container */}
+          <div className="relative z-10 w-full flex items-center justify-center pt-8">
+            
+            {/* 1. Cupped Hand Graphic (Base) */}
             <motion.div
-              animate={{ y: [0, -14, 0] }}
-              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-[-20px] sm:top-[-30px] lg:top-[-40px] z-20 flex justify-center"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
+              className="relative z-10 flex justify-center w-full"
+            >
+              <img
+                src="/Cupped Hand.png"
+                alt="Cupped Hand Visual"
+                className="w-full max-w-[280px] sm:max-w-[360px] lg:max-w-[420px] h-auto object-contain drop-shadow-[0_20px_35px_rgba(37,211,102,0.25)] transition-transform duration-500 hover:scale-105"
+              />
+            </motion.div>
+
+            {/* 2. App Phone Graphic (Floating Above Cupped Hand) */}
+            <motion.div
+              animate={{ y: [0, -14, 0], rotate: [-1, 1, -1] }}
+              transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-[-30px] sm:top-[-45px] lg:top-[-55px] z-20 flex justify-center"
             >
               <img
                 src="/App Phone.png"
                 alt="App Phone Showcase"
-                className="w-[220px] sm:w-[280px] lg:w-[320px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-transform duration-500 hover:scale-105"
+                className="w-[190px] sm:w-[250px] lg:w-[290px] h-auto object-contain drop-shadow-[0_25px_45px_rgba(0,0,0,0.65)] transition-transform duration-500 hover:scale-105"
               />
             </motion.div>
-          </motion.div>
+
+          </div>
         </motion.div>
 
       </div>
