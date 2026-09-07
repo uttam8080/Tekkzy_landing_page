@@ -122,4 +122,31 @@
   background-color: #FCFBF5 !important;
 }
 
+/* Lenis smooth scroll CSS rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Hardware acceleration for ultra smooth performance */
+img, svg, .motion-div {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
 
