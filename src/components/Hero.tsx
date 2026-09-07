@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
       <div className="absolute bottom-[50px] right-[50px] w-[200px] h-[200px] bg-[#25D366]/30 blur-3xl rounded-full pointer-events-none" />
 
       {/* 6. Content Container */}
-      <div className="relative z-10 w-full h-full flex pt-32 pb-24 px-8 sm:px-16 lg:px-24">
+      <div className="relative z-10 w-full max-w-7xl mx-auto min-h-[70vh] flex flex-col lg:flex-row items-center justify-between pt-32 pb-24 px-6 sm:px-12 lg:px-16 gap-10">
         
         {/* LEFT COLUMN: Main Text */}
         <div className="flex-1 flex flex-col justify-center max-w-2xl">
@@ -51,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="my-auto py-10"
+            className="my-auto py-6 sm:py-10"
           >
             {/* Tagline Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366]/30 mb-6">
@@ -76,6 +76,32 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
             </button>
           </motion.div>
         </div>
+
+        {/* RIGHT COLUMN: Cupped Hand Visual */}
+        <motion.div 
+          initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="flex-1 flex items-center justify-center relative w-full max-w-md lg:max-w-xl"
+        >
+          {/* Ambient Magenta & Purple Glow behind Hand */}
+          <div className="absolute w-[360px] h-[360px] bg-[#D500F9]/30 rounded-full blur-[110px] pointer-events-none mix-blend-screen" />
+          <div className="absolute w-[260px] h-[260px] bg-[#FF007F]/25 rounded-full blur-[90px] pointer-events-none" />
+
+          {/* Cupped Hand Image */}
+          <motion.div
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="relative z-10 w-full flex items-center justify-center"
+          >
+            <img
+              src="/Cupped Hand.png"
+              alt="Cupped Hand Visual"
+              className="w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[480px] h-auto object-contain drop-shadow-[0_25px_45px_rgba(213,0,249,0.35)] transition-transform duration-500 hover:scale-105"
+            />
+          </motion.div>
+        </motion.div>
+
       </div>
 
       {/* 7. Bottom Curve Divider */}

@@ -156,10 +156,10 @@ export const MembershipSection = () => {
       <div className="absolute bottom-0 left-1/3 w-[600px] h-[500px] bg-[#D500F9] rounded-full blur-[150px] opacity-20 translate-y-1/4 mix-blend-screen pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col items-center">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -167,7 +167,7 @@ export const MembershipSection = () => {
           >
             Get a
           </motion.h2>
-          <motion.h3 
+          <motion.h3
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -176,7 +176,7 @@ export const MembershipSection = () => {
           >
             Membership
           </motion.h3>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

@@ -51,7 +51,8 @@ export const ServicesSection = () => {
         }
       `}</style>
 
-      {/* Decorative Blob Backgrounds */}
+      {/* Decorative Background Image Orbs */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cover bg-center opacity-10 blur-xl pointer-events-none rounded-full" style={{ backgroundImage: "url('/premium_service_back.png')" }} />
       <div className="absolute top-40 left-[-100px] w-[300px] h-[300px] bg-[#25D366]/10 blur-[100px] rounded-full pointer-events-none" />
       <div className="absolute bottom-40 right-[-100px] w-[400px] h-[400px] bg-[#25D366]/15 blur-[120px] rounded-full pointer-events-none" />
 
@@ -90,8 +91,11 @@ export const ServicesSection = () => {
                       whileInView={{ opacity: 1, x: 0, rotate: 0, scale: 1 }}
                       viewport={{ once: true, margin: "-100px" }}
                       transition={{ type: "spring", stiffness: 100, damping: 20, duration: 0.8 }}
-                      className="bg-gradient-to-b from-[#0B040B] to-[#33001E] p-8 aspect-square shadow-xl hover:shadow-2xl hover:shadow-[#33001E]/40 transition-all w-full max-w-[320px] flex flex-col justify-center items-center text-center relative group mx-auto animate-morph overflow-hidden"
-                      style={{ transformStyle: 'preserve-3d' }} // helps safari clipping bugs
+                      className="bg-[#0B040B] bg-cover bg-center p-8 aspect-square shadow-xl hover:shadow-2xl hover:shadow-purple-900/40 transition-all w-full max-w-[320px] flex flex-col justify-center items-center text-center relative group mx-auto animate-morph overflow-hidden"
+                      style={{ 
+                        backgroundImage: `url('/premium_service_back.png')`,
+                        transformStyle: 'preserve-3d' 
+                      }}
                     >
                       {/* Decorative Spinning Dashed Border - matching the morphing shape is impossible natively, so we'll make it a soft blurred glow instead of dashed border */}
                       <div className="absolute inset-0 border-4 border-[#FF007F]/10 animate-morph pointer-events-none group-hover:border-[#FF007F]/30 transition-colors" />
