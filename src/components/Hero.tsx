@@ -61,9 +61,9 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
               </span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-black text-white leading-[1.1] tracking-tight mb-8 uppercase">
+            <h1 className="font-display-hero text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold text-white leading-[1.08] tracking-tight mb-8">
               Create Your Brand <br className="hidden sm:inline" />
-              <span className="bg-gradient-to-r from-white via-gray-100 to-gray-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-[#25D366] to-[#128C7E] bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(37,211,102,0.3)]">
                 Identity Instantly.
               </span>
             </h1>
