@@ -110,7 +110,7 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="flex-1 flex items-center justify-center lg:justify-end relative w-full max-w-md lg:max-w-xl lg:translate-x-8"
+          className="flex-1 flex items-center justify-center lg:justify-end relative w-full max-w-md lg:max-w-xl lg:translate-x-16"
         >
           {/* Ambient Glowing Backdrops */}
           <div className="absolute w-[360px] h-[360px] bg-[#D500F9]/30 rounded-full blur-[110px] pointer-events-none mix-blend-screen" />
@@ -130,7 +130,7 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
             />
 
             {/* App Phone (Held directly inside hand fingers & palm, shifted slightly right) */}
-            <div className="absolute top-[8%] sm:top-[6%] lg:top-[5%] left-[52%] -translate-x-1/2 z-20 w-[54%] max-w-[210px] sm:max-w-[270px] lg:max-w-[310px] pointer-events-auto">
+            <div className="absolute top-[8%] sm:top-[6%] lg:top-[5%] left-[54%] -translate-x-1/2 z-20 w-[54%] max-w-[210px] sm:max-w-[270px] lg:max-w-[310px] pointer-events-auto">
               <img
                 src="/App Phone.png"
                 alt="App Phone Showcase"
