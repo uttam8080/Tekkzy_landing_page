@@ -46,35 +46,63 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
         {/* LEFT COLUMN: Main Text */}
         <div className="flex-1 flex flex-col justify-center max-w-2xl lg:-ml-4">
           
-          {/* Headline & Text */}
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="my-auto py-6 sm:py-10"
-          >
-            {/* Tagline Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366]/30 mb-6">
+          {/* Headline & Text with Staggered Mask Reveal */}
+          <div className="my-auto py-6 sm:py-10">
+            
+            {/* Tagline Badge Mask Reveal */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: [0.215, 0.61, 0.355, 1] }}
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366]/30 mb-6"
+            >
               <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
               <span className="text-[#25D366] text-xs sm:text-sm font-bold tracking-[0.2em] uppercase">
                 You Think We Create
               </span>
-            </div>
+            </motion.div>
 
+            {/* Main Headline Mask Reveal */}
             <h1 className="font-display-hero text-4xl sm:text-5xl md:text-6xl lg:text-[68px] font-extrabold text-white leading-[1.08] tracking-tight mb-8">
-              Create Your Brand <br className="hidden sm:inline" />
-              <span className="bg-gradient-to-r from-white via-[#25D366] to-[#128C7E] bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(37,211,102,0.3)]">
-                Identity Instantly.
-              </span>
+              {/* Line 1 Reveal */}
+              <div className="overflow-hidden pb-1">
+                <motion.span
+                  initial={{ y: '110%', opacity: 0, rotateX: -30 }}
+                  animate={{ y: '0%', opacity: 1, rotateX: 0 }}
+                  transition={{ duration: 0.85, delay: 0.1, ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block transform-gpu"
+                >
+                  Create Your Brand
+                </motion.span>
+              </div>
+
+              {/* Line 2 Gradient Highlight Reveal */}
+              <div className="overflow-hidden py-1">
+                <motion.span
+                  initial={{ y: '110%', opacity: 0, rotateX: -30 }}
+                  animate={{ y: '0%', opacity: 1, rotateX: 0 }}
+                  transition={{ duration: 0.85, delay: 0.25, ease: [0.215, 0.61, 0.355, 1] }}
+                  className="inline-block transform-gpu bg-gradient-to-r from-white via-[#25D366] to-[#128C7E] bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(37,211,102,0.3)]"
+                >
+                  Identity Instantly.
+                </motion.span>
+              </div>
             </h1>
             
-            <button 
-              onClick={onViewProjects}
-              className="bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#1ebf5b] hover:to-[#0f7a6e] text-white font-bold text-sm px-8 py-3.5 rounded-full tracking-wider shadow-lg shadow-[#25D366]/20 transition-all hover:shadow-xl hover:-translate-y-0.5"
+            {/* Action Button Reveal */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.45, ease: [0.215, 0.61, 0.355, 1] }}
             >
-              EXPLORE OUR WORK
-            </button>
-          </motion.div>
+              <button 
+                onClick={onViewProjects}
+                className="bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:from-[#1ebf5b] hover:to-[#0f7a6e] text-white font-bold text-sm px-8 py-3.5 rounded-full tracking-wider shadow-lg shadow-[#25D366]/20 transition-all hover:shadow-xl hover:-translate-y-0.5"
+              >
+                EXPLORE OUR WORK
+              </button>
+            </motion.div>
+          </div>
         </div>
 
         {/* RIGHT COLUMN: Hand Holding App Phone Showcase */}
