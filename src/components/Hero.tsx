@@ -41,10 +41,10 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
       <div className="absolute bottom-[50px] right-[50px] w-[200px] h-[200px] bg-[#25D366]/30 blur-3xl rounded-full pointer-events-none" />
 
       {/* 6. Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between pt-28 pb-10 px-6 sm:px-12 lg:px-16 gap-10">
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center justify-between pt-28 pb-10 px-4 sm:px-8 lg:px-12 gap-8">
         
         {/* LEFT COLUMN: Main Text */}
-        <div className="flex-1 flex flex-col justify-center max-w-2xl">
+        <div className="flex-1 flex flex-col justify-center max-w-2xl lg:-ml-4">
           
           {/* Headline & Text */}
           <motion.div 
