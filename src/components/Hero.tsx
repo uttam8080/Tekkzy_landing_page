@@ -7,7 +7,7 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
   return (
-    <section id="home" className="relative w-full min-h-[115vh] bg-[#111] overflow-hidden font-sans pb-32">
+    <section id="home" className="relative w-full min-h-[90vh] bg-[#111] overflow-hidden font-sans pb-8">
       
       {/* 1. Left Background Image */}
       <img
@@ -41,7 +41,7 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
       <div className="absolute bottom-[50px] right-[50px] w-[200px] h-[200px] bg-[#25D366]/30 blur-3xl rounded-full pointer-events-none" />
 
       {/* 6. Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto min-h-[70vh] flex flex-col lg:flex-row items-center justify-between pt-32 pb-24 px-6 sm:px-12 lg:px-16 gap-10">
+      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between pt-28 pb-10 px-6 sm:px-12 lg:px-16 gap-10">
         
         {/* LEFT COLUMN: Main Text */}
         <div className="flex-1 flex flex-col justify-center max-w-2xl">
