@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Custom architectural gold gradients & shadows */
+.text-gold {
+  color: #C59A58;
+}
+
+.bg-gold {
+  background-color: #C59A58;
+}
+
+.border-gold {
+  border-color: #C59A58;
+}
+
+.shadow-gold {
+  box-shadow: 0 10px 25px -5px rgba(197, 154, 88, 0.3);
+}
+
+.blueprint-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(197, 154, 88, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(197, 154, 88, 0.05) 1px, transparent 1px);
+}
+
+.blueprint-grid-dark {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121519;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a313a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C59A58;
+}
+
+/* Custom marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes sweep {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.animate-sweep {
+  animation: sweep 0.8s ease-in-out forwards;
+}
+
+/* Ensure completely seamless section connections without borders or spacer lines */
+.pin-spacer,
+#premium-services {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.pin-spacer {
+  background-color: #FCFBF5 !important;
+}
+
+

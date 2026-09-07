@@ -1,0 +1,7 @@
+{
+  "name": "Buildora - Architecture & Construction",
+  "description": "Premium construction and architecture landing page featuring modern luxury residences, commercial projects, services, insights, and interactive project showcases.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
