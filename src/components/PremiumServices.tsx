@@ -17,6 +17,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { PremiumServiceItem } from '../types';
 
+import { TextReveal } from './TextReveal';
+
 // Register GSAP ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
@@ -298,9 +300,9 @@ export const PremiumServices: React.FC<PremiumServicesProps> = ({ onOpenQuote })
             </div>
             <h2
               className="text-2xl sm:text-3xl lg:text-[34px] font-bold tracking-tight text-slate-900 text-center"
-              style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
             >
-              Our Premium Services
+              <TextReveal text="Our Premium Services" mode="words" delay={0.1} />
             </h2>
           </div>
 

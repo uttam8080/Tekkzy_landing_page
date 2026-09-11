@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Lock, ShieldCheck, FileText, RefreshCw, X, Copy, Check, ExternalLink, Sparkles, ArrowUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
+import { TextReveal } from './TextReveal';
+
 interface FooterSectionProps {
   onOpenContactModal: () => void;
 }
@@ -155,7 +157,7 @@ export const FooterSection: React.FC<FooterSectionProps> = ({ onOpenContactModal
           {/* Column 1: Reach us */}
           <div className="space-y-5">
             <h3 className="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-              <span>Reach us</span>
+              <TextReveal text="Reach us" mode="words" delay={0.1} />
               <span className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
             </h3>
 

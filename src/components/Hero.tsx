@@ -105,36 +105,36 @@ export const Hero: React.FC<HeroProps> = ({ onViewProjects }) => {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: Hand Holding App Phone Showcase (Enlarged & Correctly Aligned) */}
+        {/* RIGHT COLUMN: Hand Holding App Phone Showcase (Sleek Proportions) */}
         <motion.div 
           initial={{ opacity: 0, y: 40, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="flex-1 flex items-center justify-center lg:justify-end relative w-full max-w-lg lg:max-w-2xl lg:translate-x-8"
+          className="flex-1 flex items-center justify-center lg:justify-end relative w-full max-w-md lg:max-w-xl lg:translate-x-8"
         >
           {/* Ambient Glowing Backdrops */}
-          <div className="absolute w-[440px] h-[440px] bg-[#D500F9]/30 rounded-full blur-[120px] pointer-events-none mix-blend-screen" />
-          <div className="absolute w-[340px] h-[340px] bg-[#25D366]/25 rounded-full blur-[100px] pointer-events-none" />
+          <div className="absolute w-[360px] h-[360px] bg-[#D500F9]/30 rounded-full blur-[110px] pointer-events-none mix-blend-screen" />
+          <div className="absolute w-[280px] h-[280px] bg-[#25D366]/25 rounded-full blur-[90px] pointer-events-none" />
 
           {/* Unified Hand + Phone Container */}
           <motion.div
-            animate={{ y: [0, -12, 0] }}
+            animate={{ y: [0, -10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="relative z-10 w-full flex items-center justify-center pt-4"
+            className="relative z-10 w-full flex items-center justify-center pt-6"
           >
-            {/* Cupped Hand (Enlarged Base holding object) */}
+            {/* Cupped Hand (Base holding object) */}
             <img
               src="/Cupped Hand.png"
               alt="Cupped Hand Visual"
-              className="w-full max-w-[380px] sm:max-w-[500px] lg:max-w-[580px] h-auto object-contain drop-shadow-[0_30px_55px_rgba(213,0,249,0.4)]"
+              className="w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[480px] h-auto object-contain drop-shadow-[0_25px_45px_rgba(213,0,249,0.35)]"
             />
 
-            {/* App Phone (Enlarged & Held directly inside hand palm/fingers) */}
-            <div className="absolute top-[3%] sm:top-[1%] lg:top-[-2%] left-[49%] -translate-x-1/2 z-20 w-[58%] max-w-[250px] sm:max-w-[330px] lg:max-w-[380px] pointer-events-auto">
+            {/* App Phone (Held directly inside hand palm/fingers) */}
+            <div className="absolute top-[8%] sm:top-[6%] lg:top-[5%] left-[49%] -translate-x-1/2 z-20 w-[54%] max-w-[210px] sm:max-w-[270px] lg:max-w-[310px] pointer-events-auto">
               <img
                 src="/App Phone.png"
                 alt="App Phone Showcase"
-                className="w-full h-auto object-contain drop-shadow-[0_20px_45px_rgba(0,0,0,0.75)] transition-transform duration-500 hover:scale-105"
+                className="w-full h-auto object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.7)] transition-transform duration-500 hover:scale-105"
               />
             </div>
           </motion.div>

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Rocket, Crown, Diamond, CheckCircle2, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
+import { TextReveal } from './TextReveal';
+
 interface TierPlan {
   id: string;
   name: string;
@@ -167,24 +169,12 @@ export const MembershipSection = () => {
           >
             Get a
           </motion.h2>
-          <motion.h3
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-6xl sm:text-7xl font-black bg-gradient-to-r from-[#FF007F] via-[#D500F9] to-[#9D00FF] bg-clip-text text-transparent mb-6 tracking-tight"
-          >
-            Membership
-          </motion.h3>
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-gray-300 text-sm sm:text-base max-w-sm mx-auto font-light leading-relaxed"
-          >
-            Subscribe now and stop wasting time starting from scratch.
-          </motion.p>
+          <h3 className="text-6xl sm:text-7xl font-black bg-gradient-to-r from-[#FF007F] via-[#D500F9] to-[#9D00FF] bg-clip-text text-transparent mb-6 tracking-tight">
+            <TextReveal text="Membership" mode="chars" delay={0.15} />
+          </h3>
+          <p className="text-gray-300 text-sm sm:text-base max-w-sm mx-auto font-light leading-relaxed">
+            <TextReveal text="Subscribe now and stop wasting time starting from scratch." mode="words" delay={0.3} />
+          </p>
         </div>
 
         {/* --- 1. PRICING CARDS WITH DISTINCT THEMED GLOWS --- */}

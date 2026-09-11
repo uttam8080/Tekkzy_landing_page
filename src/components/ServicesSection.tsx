@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, MessageCircle, FileUp, Settings, Rocket } from 'lucide-react';
 
+import { TextReveal } from './TextReveal';
+
 export const ServicesSection = () => {
   const steps = [
     {
@@ -58,16 +60,21 @@ export const ServicesSection = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Header */}
+        {/* Header with Scroll Text Reveal */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <h2 className="text-sm font-bold tracking-[0.2em] text-[#25D366] uppercase mb-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-sm font-bold tracking-[0.2em] text-[#25D366] uppercase mb-4"
+          >
             How It Works
-          </h2>
+          </motion.h2>
           <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
-            Transform your vision into reality
+            <TextReveal text="Transform your vision into reality" mode="words" delay={0.1} />
           </h3>
           <p className="text-slate-600 text-lg leading-relaxed">
-            with our streamlined 5-step process.
+            <TextReveal text="with our streamlined 5-step process." mode="words" delay={0.25} />
           </p>
         </div>
 

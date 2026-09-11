@@ -3,6 +3,8 @@ import { ChevronLeft, ChevronRight, Home, Building2, Store, Maximize2 } from 'lu
 import { motion, AnimatePresence } from 'motion/react';
 import { ProjectItem } from '../types';
 
+import { TextReveal } from './TextReveal';
+
 interface FeaturedProjectsProps {
   onSelectProject: (project: ProjectItem) => void;
 }
@@ -110,17 +112,24 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-          <span
-            className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#C59A58]"
-            style={{ letterSpacing: '0.28em' }}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            OUR WORK
-          </span>
+            <span
+              className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#C59A58]"
+              style={{ letterSpacing: '0.28em' }}
+            >
+              OUR WORK
+            </span>
+          </motion.div>
           <h2
             className="mt-2 text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight text-[#161A1D]"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
-            Featured Projects
+            <TextReveal text="Featured Projects" mode="words" delay={0.1} />
           </h2>
         </div>
 

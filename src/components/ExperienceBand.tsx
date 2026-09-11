@@ -19,6 +19,8 @@ import {
 } from 'lucide-react';
 import { WaveDivider } from './WaveDivider';
 
+import { TextReveal } from './TextReveal';
+
 export interface ClientData {
   id: string;
   name: string;
@@ -218,15 +220,9 @@ export const ExperienceBand: React.FC = () => {
             </span>
           </motion.div>
 
-          <motion.h2 
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-3"
-          >
-            Our <span className="bg-gradient-to-r from-[#25D366] via-[#10B981] to-[#3B82F6] bg-clip-text text-transparent">Clients</span> & Success Stories
-          </motion.h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight mb-3">
+            <TextReveal text="Our Clients & Success Stories" mode="words" delay={0.1} />
+          </h2>
 
           <motion.p 
             initial={{ opacity: 0, y: 15 }}

@@ -3,6 +3,8 @@ import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
 import { BlogPost } from '../types';
 
+import { TextReveal } from './TextReveal';
+
 interface BlogSectionProps {
   onSelectPost: (post: BlogPost) => void;
 }
@@ -75,17 +77,20 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onSelectPost }) => {
         
         {/* Section Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
-          <span
-            className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#FF007F]"
+          <motion.span
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#FF007F] inline-block"
             style={{ letterSpacing: '0.28em' }}
           >
             INSIGHTS & IDEAS
-          </span>
+          </motion.span>
           <h2
             className="mt-2 text-3xl sm:text-4xl md:text-[42px] font-normal tracking-tight text-white"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
           >
-            From Our Blog
+            <TextReveal text="From Our Blog" mode="words" delay={0.1} />
           </h2>
         </div>
 
