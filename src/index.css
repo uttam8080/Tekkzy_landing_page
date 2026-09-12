@@ -97,6 +97,23 @@
   animation-play-state: paused;
 }
 
+@keyframes techMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-tech-marquee {
+  animation: techMarquee 36s linear infinite;
+}
+
+.animate-tech-marquee:hover {
+  animation-play-state: paused;
+}
+
 @keyframes sweep {
   0% {
     left: -100%;

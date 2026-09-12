@@ -159,6 +159,225 @@ const marqueeLogos = [
   { name: 'ZENITH HEALTH', icon: Globe, color: 'text-teal-400' },
 ];
 
+const techStackList = [
+  {
+    name: 'TypeScript',
+    icon: (
+      <svg className="w-full h-full rounded" viewBox="0 0 24 24" fill="none">
+        <rect width="24" height="24" rx="4" fill="#3178C6" />
+        <path d="M4 8h8M8 8v10M13.5 15.5c1 .8 2.3 1.2 3.5 1.2 1.5 0 2.5-.6 2.5-1.7 0-2.3-5.5-1.5-5.5-4.7 0-1.7 1.4-2.8 3.5-2.8 1.2 0 2.2.3 3 .8v2.4c-.9-.6-1.9-.9-2.9-.9-1.3 0-2.1.5-2.1 1.4 0 2.2 5.5 1.4 5.5 4.7 0 1.8-1.4 2.9-3.7 2.9-1.4 0-2.7-.4-3.8-1.1v-2.1z" fill="#FFFFFF" />
+      </svg>
+    ),
+  },
+  {
+    name: 'React / React Native',
+    icon: (
+      <svg className="w-full h-full" viewBox="-11.5 -10.23 23 20.46" fill="none">
+        <circle cx="0" cy="0" r="2.1" fill="#0284C7" />
+        <g stroke="#0284C7" strokeWidth="1.25" fill="none">
+          <ellipse rx="11" ry="4.2" />
+          <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+          <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+        </g>
+      </svg>
+    ),
+  },
+  {
+    name: 'Python',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M11.9 2c-3.1 0-4.9 1.4-4.9 3.5v2.5h5v.8H5.6C3.4 8.8 2 10.6 2 13.5c0 3 1.6 4.7 4.5 4.7h1.5v-2.3c0-2.1 1.7-3.8 3.8-3.8h5v-.8c0-2.8-1.7-4.5-4.9-4.5V2zm-1.8 1.6c.6 0 1 .4 1 1s-.4 1-1 1-1-.4-1-1 .4-1 1-1z" fill="#3776AB" />
+        <path d="M12.1 22c3.1 0 4.9-1.4 4.9-3.5V16h-5v-.8h6.4c2.2 0 3.6-1.8 3.6-4.7 0-3-1.6-4.7-4.5-4.7H16v2.3c0 2.1-1.7 3.8-3.8 3.8h-5v.8c0 2.8 1.7 4.5 4.9 4.5V22zm1.8-1.6c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z" fill="#FFD43B" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Next.js',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="11" fill="#000000" stroke="#FFFFFF" strokeWidth="1.5" />
+        <path d="M7.5 7.5v9h2.3V11.2l6.2 5.3h1.8V7.5h-2.3v5.3L9.3 7.5H7.5z" fill="#FFFFFF" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Swift',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M21.5 15.5c-3.1 3.5-7.7 5.5-12.5 5.5 5.2-2.3 8.8-6.3 10-11.5-2.2 2-5 3.1-8 3.1 4.5-3.3 6.6-7.8 6.5-10.6-2.5 2.5-6 4.3-9.5 4.8C9.5 5 11 3 13 2 9.5 3 6.5 5.5 5 9c1.5-.7 3.3-.9 5-.5-3.5 1.5-6 4.5-7 8.5 2-.8 4.2-1 6.5-.5-4.5 2.5-6.5 6.5-6.5 6.5 4.2.7 8.5.2 12.5-1.5 2.3-.9 4.3-2.3 6-4z" fill="#F05138" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Kotlin',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M2 2h20L12 12l10 10H2V2z" fill="#7F52FF" />
+        <path d="M2 2l10 10L2 22V2z" fill="#0095D5" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Flutter',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M13.5 2L3 12.5l3.2 3.2L19.9 2h-6.4z" fill="#42A5F5" />
+        <path d="M13.5 12l-5.3 5.3 3.2 3.2 2.1-2.1L19.9 12h-6.4z" fill="#0D47A1" />
+        <path d="M8.2 17.3l3.2 3.2 2.1-2.1-3.2-3.2-2.1 2.1z" fill="#01579B" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Dart',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M4 4h7l9 9-4.5 4.5L4 4z" fill="#0175C2" />
+        <path d="M11 4l9 9-4.5 7L6.5 11 11 4z" fill="#00B4AB" />
+        <path d="M4 4l7 7-4.5 4.5L2 11 4 4z" fill="#53C5F8" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Vue.js',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M2 3h4.5L12 13 17.5 3H22L12 21 2 3z" fill="#42B883" />
+        <path d="M6.5 3L12 13 17.5 3H14L12 6.5 10 3H6.5z" fill="#35495E" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Node.js',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2l9 5.2v10.4L12 23l-9-5.4V7.2L12 2z" fill="#339933" />
+        <path d="M12 4.4L18.6 8v7.6L12 19.3 5.4 15.6V8L12 4.4z" fill="#121619" />
+        <path d="M10 9v6h1.8v-3.5l2 3.5h1.7V9h-1.8v3.5l-2-3.5H10z" fill="#339933" />
+      </svg>
+    ),
+  },
+  {
+    name: 'JavaScript',
+    icon: (
+      <svg className="w-full h-full rounded" viewBox="0 0 24 24" fill="none">
+        <rect width="24" height="24" rx="4" fill="#F7DF1E" />
+        <path d="M7 14.5c0 2 1.3 3.5 3 3.5 1.7 0 2.7-.9 2.7-2.3V8H11v7.6c0 .7-.4 1.1-1 1.1-.6 0-.9-.4-.9-1V14.5H7zm7.5 1.2c1 .8 2.2 1.3 3.5 1.3 1.5 0 2.4-.6 2.4-1.7 0-2.3-5.2-1.5-5.2-4.6 0-1.7 1.3-2.7 3.3-2.7 1.2 0 2.2.3 3 .8v2.2c-.9-.5-1.9-.8-2.9-.8-1.2 0-1.9.5-1.9 1.3 0 2.1 5.2 1.4 5.2 4.6 0 1.8-1.4 2.9-3.6 2.9-1.4 0-2.7-.4-3.7-1.1v-2.2z" fill="#000000" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M12 6c-3 0-4.8 1.5-5.4 4.5 1.2-1.5 2.7-2.1 4.5-1.8 1 .2 1.8 1 2.6 1.8 1.3 1.4 2.9 3 6.3 3 3 0 4.8-1.5 5.4-4.5-1.2 1.5-2.7 2.1-4.5 1.8-1-.2-1.8-1-2.6-1.8-1.3-1.4-2.9-3-6.3-3zM5.4 12c-3 0-4.8 1.5-5.4 4.5 1.2-1.5 2.7-2.1 4.5-1.8 1 .2 1.8 1 2.6 1.8 1.3 1.4 2.9 3 6.3 3 3 0 4.8-1.5 5.4-4.5-1.2 1.5-2.7 2.1-4.5 1.8-1-.2-1.8-1-2.6-1.8-1.3-1.4-2.9-3-6.3-3z" fill="#06B6D4" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Golang',
+    icon: (
+      <svg className="w-full h-full rounded" viewBox="0 0 24 24" fill="none">
+        <rect width="24" height="24" rx="4" fill="#00ADD8" />
+        <path d="M5 12c0-2.8 2.2-5 5-5 2.1 0 3.8 1.2 4.6 3h-2.4c-.6-.7-1.3-1.1-2.2-1.1-1.7 0-3 1.3-3 3.1s1.3 3.1 3 3.1c1 0 1.8-.5 2.3-1.3H10v-1.8h4.8v4.5C13.8 16.6 12 17 10 17c-2.8 0-5-2.2-5-5zm12.5-5c1.9 0 3.5 1.6 3.5 3.5s-1.6 3.5-3.5 3.5-3.5-1.6-3.5-3.5 1.6-3.5 3.5-3.5zm0 1.9c-.9 0-1.6.7-1.6 1.6s.7 1.6 1.6 1.6 1.6-.7 1.6-1.6-.7-1.6-1.6-1.6z" fill="#FFFFFF" />
+      </svg>
+    ),
+  },
+  {
+    name: 'PostgreSQL',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.4 9.2.2-.4.4-.9.6-1.5-.7-.3-1.4-.7-2-1.2.3-.5.7-1 1.2-1.4-.4-.7-.7-1.5-.8-2.3 1.1.2 2.2.2 3.2-.2-.2-.6-.3-1.3-.3-2 0-3.3 2.7-6 6-6s6 2.7 6 6c0 .7-.1 1.4-.3 2 1 .4 2.1.4 3.2.2-.1.8-.4 1.6-.8 2.3.5.4.9.9 1.2 1.4-.6.5-1.3.9-2 1.2.2.6.4 1.1.6 1.5 3.8-1.4 6.4-5 6.4-9.2 0-5.5-4.5-10-10-10z" fill="#336791" />
+      </svg>
+    ),
+  },
+  {
+    name: 'MongoDB',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2C11.5 2 8 8 8 13.5c0 4.5 3 7.5 4 8.5 1-1 4-4 4-8.5C16 8 12.5 2 12 2z" fill="#47A248" />
+        <path d="M12 2.5v19c.7-.7 3.5-3.5 3.5-8 0-5-3-10-3.5-11z" fill="#499D4A" opacity="0.6" />
+      </svg>
+    ),
+  },
+  {
+    name: 'GraphQL',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2l8.7 5v10L12 22l-8.7-5V7L12 2z" stroke="#E10098" strokeWidth="1.5" fill="none" />
+        <circle cx="12" cy="2" r="2" fill="#E10098" />
+        <circle cx="20.7" cy="7" r="2" fill="#E10098" />
+        <circle cx="20.7" cy="17" r="2" fill="#E10098" />
+        <circle cx="12" cy="22" r="2" fill="#E10098" />
+        <circle cx="3.3" cy="17" r="2" fill="#E10098" />
+        <circle cx="3.3" cy="7" r="2" fill="#E10098" />
+        <path d="M12 4.5v15M4.5 8l15 8M4.5 16l15-8" stroke="#E10098" strokeWidth="1" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Docker',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M22.5 11c-.3 0-1.5 0-2.3.8-.5-.3-1.4-.5-2.4-.4-.5-1.2-1.6-2-3-2.1-.2-.8-.8-1.5-1.6-1.9-.3-.1-.6-.2-1-.2h-.2V5h-3v2H7V5H4v2H2v6.5C2 17.5 5 20 10.5 20c6.5 0 10.5-3.5 11.5-8.5.5-.1.8-.3 1-.5h.2c.2 0 .5-.2.5-.5 0-.3-.4-.5-1.2-.5z" fill="#2496ED" />
+        <rect x="5" y="8" width="2" height="2" fill="#FFFFFF" />
+        <rect x="8" y="8" width="2" height="2" fill="#FFFFFF" />
+        <rect x="11" y="8" width="2" height="2" fill="#FFFFFF" />
+        <rect x="8" y="5.5" width="2" height="2" fill="#FFFFFF" />
+      </svg>
+    ),
+  },
+  {
+    name: 'AWS Cloud',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M7 16c2.5 1.5 6.5 2.2 10 .5.5-.2 1.1.3.8.8-2 2-6.5 2.7-10.8 1.2-.6-.2-.6-.8 0-.9v-1.6z" fill="#FF9900" />
+        <path d="M18.5 14.5l2 2.5-3 .8 1-3.3z" fill="#FF9900" />
+        <path d="M5.5 12.5C4 12 3 10.8 3 9.3 3 7.5 4.5 6 6.5 6c.5 0 1 .1 1.5.3C9 4.8 10.8 4 13 4c3.3 0 6 2.5 6.3 5.7 1.5.5 2.7 1.8 2.7 3.3 0 2-1.7 3.5-3.8 3.5H7c-.6 0-1.1-.1-1.5-.4" stroke="#FF9900" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Firebase',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M4 17.5L6.5 2.5l4 7.5L8 14.5 4 17.5z" fill="#FFA000" />
+        <path d="M4 17.5l8 4.5 8-4.5-4-15L4 17.5z" fill="#F57C00" opacity="0.5" />
+        <path d="M12 22l8-4.5-3-14.5-5 19z" fill="#FFCA28" />
+      </svg>
+    ),
+  },
+  {
+    name: 'PHP',
+    icon: (
+      <svg className="w-full h-full rounded-full" viewBox="0 0 24 24" fill="none">
+        <ellipse cx="12" cy="12" rx="11" ry="6.5" fill="#777BB4" />
+        <path d="M6 10h2.5c.8 0 1.5.4 1.5 1.2 0 1-.8 1.3-1.5 1.3H7.2V14H6V10zm1.2 1.8h1.2c.3 0 .6-.1.6-.5 0-.3-.3-.5-.6-.5H7.2v1zM11 10h1.2v1.5h1.6V10H15v4h-1.2v-1.5h-1.6V14H11V10zm5 0h2.5c.8 0 1.5.4 1.5 1.2 0 1-.8 1.3-1.5 1.3h-1.3V14H16V10zm1.2 1.8h1.2c.3 0 .6-.1.6-.5 0-.3-.3-.5-.6-.5h-1.2v1z" fill="#FFFFFF" />
+      </svg>
+    ),
+  },
+  {
+    name: 'HTML5',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M3 3l1.8 16.5L12 22l7.2-2.5L21 3H3z" fill="#E34F26" />
+        <path d="M12 4.5v15.8l5.8-2L19.2 4.5H12z" fill="#EF652A" />
+        <path d="M12 8.5H7.5l.3 3.5h4.2v-3.5zm0 5.5H8l.2 2 3.8 1v-3z" fill="#FFFFFF" />
+        <path d="M12 8.5h4.5l-.4 4.5H12V11.5h3.2l.2-1.5H12V8.5zm0 5.5v3l3.8-1 .3-3.2H12v1.2z" fill="#EBEBEB" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Redis',
+    icon: (
+      <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
+        <path d="M12 2L2 7l10 5 10-5-10-5z" fill="#DC382D" />
+        <path d="M2 12l10 5 10-5" stroke="#DC382D" strokeWidth="2" fill="none" />
+        <path d="M2 17l10 5 10-5" stroke="#DC382D" strokeWidth="2" fill="none" />
+      </svg>
+    ),
+  },
+];
+
 export const ExperienceBand: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string>('All');
   const [activeSlide, setActiveSlide] = useState(0);
@@ -203,7 +422,29 @@ export const ExperienceBand: React.FC = () => {
       <div className="absolute bottom-10 right-10 w-[600px] h-[600px] bg-[#3B82F6]/15 rounded-full blur-[160px] pointer-events-none" />
       <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-[#C59A58]/10 rounded-full blur-[130px] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 pt-4 sm:pt-8 pb-10 sm:pb-16">
+      {/* --- UPPER BLACK GAP: CONTINUOUS PROGRAMMING LANGUAGES MARQUEE (ENLARGED & TOUCHING SECTION DIVIDER) --- */}
+      <div className="relative w-full z-20 -mt-6 sm:-mt-10 md:-mt-14 pt-0 pb-4 sm:pb-6 overflow-hidden">
+        {/* Subtle Side Fades */}
+        <div className="absolute top-0 left-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-[#121619] via-[#121619]/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute top-0 right-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-[#121619] via-[#121619]/90 to-transparent z-10 pointer-events-none" />
+
+        {/* Marquee Track - Moving Right to Left */}
+        <div className="flex w-max animate-tech-marquee space-x-4 sm:space-x-6 items-center py-2">
+          {[...techStackList, ...techStackList, ...techStackList].map((tech, idx) => (
+            <div
+              key={`${tech.name}-${idx}`}
+              title={tech.name}
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center bg-white border-2 border-white/90 hover:border-[#EC4899] hover:ring-4 hover:ring-[#EC4899]/30 hover:shadow-[0_0_35px_rgba(236,72,153,0.75)] hover:scale-110 transition-all duration-300 group cursor-pointer flex-shrink-0 shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
+            >
+              <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                {tech.icon}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 pt-2 sm:pt-4 pb-10 sm:pb-16">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-8">
@@ -408,67 +649,27 @@ export const ExperienceBand: React.FC = () => {
               </div>
             </div>
 
-            {/* --- ANIMATED CLIENT SELECTOR BOXES BELOW --- */}
-            <div className="mt-5">
-              <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-3 text-center">
-                Select Client Story
-              </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3">
-                {clientsData.map((client, idx) => {
-                  const isActive = idx === activeSlide;
-                  return (
-                    <motion.div
-                      key={client.id}
-                      onClick={() => {
-                        setIsAutoplay(false);
-                        setActiveSlide(idx);
-                      }}
-                      whileHover={{ y: -3, scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                      className={`relative cursor-pointer rounded-xl p-3 border transition-all duration-300 overflow-hidden ${
-                        isActive
-                          ? 'bg-[#1E262E] border-[#25D366] shadow-[0_0_20px_rgba(37,211,102,0.25)]'
-                          : 'bg-[#151A1E]/80 border-white/10 hover:border-white/30 hover:bg-[#1A2026]'
-                      }`}
-                    >
-                      {/* Active Indicator Glow Bar */}
-                      {isActive && (
-                        <motion.div
-                          layoutId="activeClientGlow"
-                          className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#25D366] to-[#10B981]"
-                          transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                        />
-                      )}
-
-                      <div className="flex flex-col h-full justify-between space-y-1.5">
-                        <div className="flex items-center justify-between">
-                          <span className={`text-[9px] font-mono uppercase px-1.5 py-0.5 rounded font-extrabold ${isActive ? 'bg-[#25D366]/20 text-[#25D366]' : 'bg-white/5 text-gray-400'}`}>
-                            {client.category}
-                          </span>
-                          {isActive && (
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-                          )}
-                        </div>
-
-                        <div className="font-bold text-xs text-white tracking-tight line-clamp-1">
-                          {client.name}
-                        </div>
-
-                        <div className="text-[11px] font-mono font-extrabold text-[#25D366]">
-                          {client.metrics[0]?.value} {client.metrics[0]?.label}
-                        </div>
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </div>
-
             {/* Slider Navigation Controls */}
             <div className="flex items-center justify-between mt-4 px-1">
               <div className="text-[11px] text-gray-400 font-mono">
                 0{activeSlide + 1} / 0{clientsData.length}
+              </div>
+
+              {/* Dots indicator for stories */}
+              <div className="flex items-center gap-1.5">
+                {clientsData.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setIsAutoplay(false);
+                      setActiveSlide(idx);
+                    }}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                      idx === activeSlide ? 'w-6 bg-[#25D366]' : 'w-1.5 bg-white/20 hover:bg-white/40'
+                    }`}
+                    aria-label={`Go to client story ${idx + 1}`}
+                  />
+                ))}
               </div>
 
               <div className="flex items-center gap-2">

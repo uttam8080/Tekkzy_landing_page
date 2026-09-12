@@ -8,6 +8,7 @@ interface TextRevealProps {
   stagger?: number;
   mode?: 'words' | 'chars' | 'lines';
   once?: boolean;
+  wrap?: boolean;
 }
 
 export const TextReveal: React.FC<TextRevealProps> = ({
@@ -17,6 +18,7 @@ export const TextReveal: React.FC<TextRevealProps> = ({
   stagger = 0.06,
   mode = 'words',
   once = true,
+  wrap = true,
 }) => {
   if (mode === 'lines') {
     const lines = text.split('\n');
@@ -122,11 +124,11 @@ export const TextReveal: React.FC<TextRevealProps> = ({
       initial="hidden"
       whileInView="visible"
       viewport={{ once, margin: '-40px' }}
-      className={`inline-flex flex-wrap gap-x-[0.25em] gap-y-[0.1em] overflow-hidden ${className}`}
+      className={`inline-flex ${wrap ? 'flex-wrap' : 'flex-nowrap whitespace-nowrap'} justify-center items-center gap-x-[0.28em] gap-y-[0.1em] overflow-hidden ${className}`}
       style={{ perspective: '1000px' }}
     >
       {words.map((word, index) => (
-        <span key={index} className="inline-block overflow-hidden py-0.5">
+        <span key={index} className="inline-block overflow-hidden py-0.5 whitespace-nowrap">
           <motion.span
             variants={wordVariants}
             className="inline-block transform-gpu origin-bottom-left"

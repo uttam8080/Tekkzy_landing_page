@@ -3,9 +3,10 @@ import React from 'react';
 interface WaveProps {
   className?: string;
   variant?: 'dark-to-cream' | 'cream-to-dark' | 'dark-to-cream-inverted' | 'cream-to-dark-footer';
+  fillColor?: string;
 }
 
-export const WaveDivider: React.FC<WaveProps> = ({ className = '', variant = 'dark-to-cream' }) => {
+export const WaveDivider: React.FC<WaveProps> = ({ className = '', variant = 'dark-to-cream', fillColor }) => {
   if (variant === 'dark-to-cream') {
     // Top hero to cream section (downward dipping wave with gold rim)
     return (
@@ -36,7 +37,7 @@ export const WaveDivider: React.FC<WaveProps> = ({ className = '', variant = 'da
   }
 
   if (variant === 'cream-to-dark') {
-    // Premium Services cream down to Experience dark band
+    // Premium Services / Services cream down to Dark band or Blog
     return (
       <div className={`relative w-full overflow-hidden leading-none z-10 pointer-events-none ${className}`}>
         <svg
@@ -46,10 +47,18 @@ export const WaveDivider: React.FC<WaveProps> = ({ className = '', variant = 'da
           preserveAspectRatio="none"
           className="w-full h-12 sm:h-16 md:h-20 lg:h-24 block"
         >
+          {/* Subtle gold contour line */}
+          <path
+            d="M0 50 C380 5 820 85 1200 35 C1320 20 1390 40 1440 45"
+            stroke="#C59A58"
+            strokeWidth="1.5"
+            strokeOpacity="0.85"
+            fill="none"
+          />
           {/* Dark fill directly over underlying section */}
           <path
             d="M0 50 C380 5 820 85 1200 35 C1320 20 1390 40 1440 45 L1440 90 L0 90 Z"
-            fill="#121619"
+            fill={fillColor || '#121619'}
           />
         </svg>
       </div>

@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, CheckCircle2, MessageCircle, FileUp, Settings, Rocket } from 'lucide-react';
 
 import { TextReveal } from './TextReveal';
+import { WaveDivider } from './WaveDivider';
 
 export const ServicesSection = () => {
   const steps = [
@@ -39,7 +40,7 @@ export const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="relative bg-[#FAF8F5] pt-24 pb-32 overflow-hidden font-sans">
+    <section id="services" className="relative bg-[#FAF8F5] pt-24 pb-0 overflow-hidden font-sans">
       
       {/* Inject custom keyframes for the water blob morphing effect */}
       <style>{`
@@ -61,7 +62,7 @@ export const ServicesSection = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header with Scroll Text Reveal */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
+        <div className="text-center max-w-4xl mx-auto mb-20 px-2 sm:px-4">
           <motion.h2 
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -70,10 +71,10 @@ export const ServicesSection = () => {
           >
             How It Works
           </motion.h2>
-          <h3 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 tracking-tight">
-            <TextReveal text="Transform your vision into reality" mode="words" delay={0.1} />
+          <h3 className="text-[clamp(1.25rem,3.8vw,3rem)] font-black text-slate-900 mb-6 tracking-tight whitespace-nowrap flex justify-center items-center">
+            <TextReveal text="Transform your vision into reality" mode="words" delay={0.1} wrap={false} />
           </h3>
-          <p className="text-slate-600 text-lg leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
             <TextReveal text="with our streamlined 5-step process." mode="words" delay={0.25} />
           </p>
         </div>
@@ -154,20 +155,8 @@ export const ServicesSection = () => {
 
       </div>
 
-      {/* 8. Bottom Pyramids Divider */}
-      <div className="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-20 pointer-events-none">
-        <svg 
-          className="relative block w-full h-[60px] sm:h-[100px]" 
-          xmlns="http://www.w3.org/2000/svg" 
-          viewBox="0 0 1200 120" 
-          preserveAspectRatio="none"
-        >
-          <path 
-            d="M 0 120 L 0 90 L 300 0 L 600 100 L 900 30 L 1200 80 L 1200 120 Z" 
-            fill="#05000A" 
-          />
-        </svg>
-      </div>
+      {/* 8. Bottom Curved Wave Divider into Dark Blog Section */}
+      <WaveDivider variant="cream-to-dark" fillColor="#0B040B" />
     </section>
   );
 };

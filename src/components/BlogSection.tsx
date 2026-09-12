@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { BlogPost } from '../types';
 
 import { TextReveal } from './TextReveal';
+import { WaveDivider } from './WaveDivider';
 
 interface BlogSectionProps {
   onSelectPost: (post: BlogPost) => void;
@@ -72,7 +73,7 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onSelectPost }) => {
   };
 
   return (
-    <section id="insights" className="relative bg-gradient-to-b from-[#0B040B] to-[#33001E] pt-12 pb-16 sm:pb-24 overflow-hidden">
+    <section id="insights" className="relative bg-gradient-to-b from-[#0B040B] to-[#33001E] pt-12 pb-0 overflow-hidden">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         
         {/* Section Heading */}
@@ -171,6 +172,8 @@ export const BlogSection: React.FC<BlogSectionProps> = ({ onSelectPost }) => {
         </div>
       </div>
 
+      {/* Wave Transition Bottom to Cream Focus Areas Section */}
+      <WaveDivider variant="dark-to-cream-inverted" className="mt-10 sm:mt-16" />
     </section>
   );
 };

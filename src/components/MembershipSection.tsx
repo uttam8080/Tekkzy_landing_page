@@ -151,6 +151,7 @@ const faqs = [
 export const MembershipSection = () => {
   return (
     <section className="relative w-full bg-[#05000A] text-white pt-20 pb-16 sm:pb-20 overflow-hidden font-sans">
+
       {/* Background Ambient Glows */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#9D00FF] rounded-full blur-[160px] opacity-20 -translate-y-1/2 translate-x-1/4 mix-blend-screen pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-[#FF007F] rounded-full blur-[160px] opacity-30 translate-y-1/4 -translate-x-1/4 mix-blend-screen pointer-events-none" />

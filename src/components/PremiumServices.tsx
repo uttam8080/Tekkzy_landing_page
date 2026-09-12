@@ -33,6 +33,7 @@ interface ServiceDetail extends PremiumServiceItem {
   icon: React.ReactNode;
   miniIcon: React.ReactNode;
   highlights: string[];
+  videoUrl?: string;
 }
 
 const premiumServicesData: ServiceDetail[] = [
@@ -44,6 +45,7 @@ const premiumServicesData: ServiceDetail[] = [
       'UI: Elegant design, intuitive interactions. UX: Purposeful journeys, foreseeing needs, meaningful engagements, delightful digital connections.',
     imageUrl:
       'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
+    videoUrl: 'https://res.cloudinary.com/n0c7bqpd/video/upload/v1789210115/video1_odp1x0.mp4',
     imageAlt: 'Spatial architectural UI & modern digital connection',
     icon: <Layout className="w-8 h-8 sm:w-9 sm:h-9 text-white" />,
     miniIcon: <Layout className="w-3.5 h-3.5 text-white" />,
@@ -63,6 +65,7 @@ const premiumServicesData: ServiceDetail[] = [
       'With personalization, we craft unique journeys for every customer, aligning their preferences with our offerings to create unparalleled satisfaction and brand loyalty.',
     imageUrl:
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=900&q=80',
+    videoUrl: 'https://res.cloudinary.com/n0c7bqpd/video/upload/v1789210714/video2_zatf5q.mp4',
     imageAlt: 'Customized luxury architectural preferences and layout',
     icon: <Sliders className="w-8 h-8 sm:w-9 sm:h-9 text-white" />,
     miniIcon: <Sliders className="w-3.5 h-3.5 text-white" />,
@@ -82,6 +85,7 @@ const premiumServicesData: ServiceDetail[] = [
       'Advanced Identity Solutions: Optimize user authentication, authorization, and tracking with our cutting-edge login and identity management.',
     imageUrl:
       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80',
+    videoUrl: 'https://res.cloudinary.com/n0c7bqpd/video/upload/v1789211242/video3_zv28gr.mp4',
     imageAlt: 'Commercial enterprise biometric access tower',
     icon: <ShieldCheck className="w-8 h-8 sm:w-9 sm:h-9 text-white" />,
     miniIcon: <ShieldCheck className="w-3.5 h-3.5 text-white" />,
@@ -101,6 +105,7 @@ const premiumServicesData: ServiceDetail[] = [
       'Our services offer industry-specific features, empowering businesses with tools and functionalities optimized for success in their respective fields.',
     imageUrl:
       'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80',
+    videoUrl: 'https://res.cloudinary.com/n0c7bqpd/video/upload/v1789211733/video4_hlxps3.mp4',
     imageAlt: 'Architectural drafting, BIM blueprints, and trade elevation plans',
     icon: <Briefcase className="w-8 h-8 sm:w-9 sm:h-9 text-white" />,
     miniIcon: <Briefcase className="w-3.5 h-3.5 text-white" />,
@@ -342,7 +347,7 @@ export const PremiumServices: React.FC<PremiumServicesProps> = ({ onOpenQuote })
                   onClick={() => {
                     if (!isCurrent) scrollToIndex(idx);
                   }}
-                  className={`w-[88vw] max-w-5xl h-[360px] sm:h-[400px] lg:h-[430px] flex-shrink-0 rounded-[24px] sm:rounded-[30px] border transition-all duration-300 relative overflow-hidden ${
+                  className={`w-[90vw] max-w-6xl h-[380px] sm:h-[420px] lg:h-[460px] flex-shrink-0 rounded-[24px] sm:rounded-[30px] border transition-all duration-300 relative overflow-hidden ${
                     isCurrent
                       ? 'border-slate-800 ring-2 ring-[#8C30F5] shadow-[0_16px_40px_-10px_rgba(0,0,0,0.2)] scale-100 opacity-100'
                       : 'border-slate-300 shadow-[0_8px_24px_-8px_rgba(0,0,0,0.1)] scale-[0.98] opacity-85 hover:opacity-100 cursor-pointer'
@@ -351,8 +356,8 @@ export const PremiumServices: React.FC<PremiumServicesProps> = ({ onOpenQuote })
                   {/* Two-Part Split Layout Container - Full Height */}
                   <div className="flex flex-col lg:flex-row items-stretch w-full h-full">
                     
-                    {/* PART 1: LEFT TEXT SECTION (Deep Obsidian Background - Crisp & Clear) */}
-                    <div className="w-full lg:w-[55%] bg-[#0B0F17] p-6 sm:p-8 lg:p-10 flex flex-col justify-between relative z-10 h-full overflow-hidden">
+                    {/* PART 1: LEFT TEXT SECTION (Deep Obsidian Background - Squeezed for more video presence) */}
+                    <div className="w-full lg:w-[40%] bg-[#0B0F17] p-6 sm:p-7 lg:p-8 flex flex-col justify-between relative z-10 h-full overflow-hidden">
                       <div>
                         {/* Giant Gradient Number: from reference image */}
                         <div
@@ -366,12 +371,12 @@ export const PremiumServices: React.FC<PremiumServicesProps> = ({ onOpenQuote })
                         </div>
 
                         {/* Title */}
-                        <h3 className="text-xl sm:text-2xl lg:text-[28px] font-bold text-white tracking-tight mt-3 sm:mt-4 mb-2 leading-tight">
+                        <h3 className="text-xl sm:text-2xl lg:text-[26px] font-bold text-white tracking-tight mt-3 sm:mt-4 mb-2 leading-tight">
                           {item.title}
                         </h3>
 
                         {/* Description - High contrast clear text */}
-                        <p className="text-slate-200 text-xs sm:text-sm lg:text-[14.5px] leading-relaxed max-w-lg font-normal line-clamp-3 sm:line-clamp-4">
+                        <p className="text-slate-200 text-xs sm:text-sm lg:text-[13.5px] leading-relaxed max-w-lg font-normal line-clamp-3 sm:line-clamp-4">
                           {item.description}
                         </p>
                       </div>
@@ -395,17 +400,30 @@ export const PremiumServices: React.FC<PremiumServicesProps> = ({ onOpenQuote })
                     <div className="hidden lg:block w-[1px] bg-slate-700 relative z-20 flex-shrink-0 h-full" />
                     <div className="block lg:hidden w-full h-[1px] bg-slate-700 relative z-20 flex-shrink-0" />
 
-                    {/* PART 2: RIGHT IMAGE SECTION (Solid Crisp Twilight Slate Background - NOT Black, ONLY the image) */}
-                    <div className="w-full lg:w-[45%] bg-[#1A2333] p-4 sm:p-6 lg:p-7 flex items-center justify-center relative overflow-hidden z-10 h-full">
+                    {/* PART 2: RIGHT VIDEO/MEDIA SECTION (Expanded towards content side) */}
+                    <div className="w-full lg:w-[60%] bg-[#1A2333] p-3 sm:p-5 lg:p-6 flex items-center justify-center relative overflow-hidden z-10 h-full">
                       {/* ONLY the image correctly framed without any extra widgets */}
                       <div className="w-full h-full rounded-xl sm:rounded-2xl overflow-hidden shadow-lg border border-slate-700/50 relative group">
-                        <img
-                          src={item.imageUrl}
-                          alt={item.imageAlt}
-                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                          loading="lazy"
-                          referrerPolicy="no-referrer"
-                        />
+                        {item.videoUrl ? (
+                          <video
+                            src={item.videoUrl}
+                            poster={item.imageUrl}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            preload="auto"
+                          />
+                        ) : (
+                          <img
+                            src={item.imageUrl}
+                            alt={item.imageAlt}
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                          />
+                        )}
                       </div>
                     </div>
 
@@ -460,11 +478,24 @@ export const PremiumServices: React.FC<PremiumServicesProps> = ({ onOpenQuote })
 
               {/* Top Image Preview Banner */}
               <div className="h-36 w-full rounded-2xl overflow-hidden mb-4 relative border border-slate-700/60">
-                <img
-                  src={activeModalItem.imageUrl}
-                  alt={activeModalItem.imageAlt}
-                  className="w-full h-full object-cover"
-                />
+                {activeModalItem.videoUrl ? (
+                  <video
+                    src={activeModalItem.videoUrl}
+                    poster={activeModalItem.imageUrl}
+                    className="w-full h-full object-cover"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                  />
+                ) : (
+                  <img
+                    src={activeModalItem.imageUrl}
+                    alt={activeModalItem.imageAlt}
+                    className="w-full h-full object-cover"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#121620] via-transparent to-black/30" />
                 <div className="absolute bottom-3 left-4 flex items-center gap-2">
                   <span className="text-xs uppercase tracking-widest text-[#DF27FF] font-mono font-semibold px-2.5 py-0.5 rounded bg-purple-950/80 border border-purple-800/50 backdrop-blur-sm">

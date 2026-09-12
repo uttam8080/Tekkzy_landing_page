@@ -11,6 +11,7 @@ import { PremiumServices } from './components/PremiumServices';
 import { ExperienceBand } from './components/ExperienceBand';
 import { ServicesSection } from './components/ServicesSection';
 import { BlogSection } from './components/BlogSection';
+import { FocusAreasSection } from './components/FocusAreasSection';
 import { FooterSection } from './components/FooterSection';
 import { QuoteModal } from './components/QuoteModal';
 import { ProjectModal } from './components/ProjectModal';
@@ -88,6 +89,9 @@ export default function App() {
 
         {/* 6. From Our Blog (Warm Cream #FAF8F5) */}
         <BlogSection onSelectPost={(post) => setSelectedArticle(post)} />
+
+        {/* 6b. Core Focus Areas (Editorial Typography with Inline Photo Badges) */}
+        <FocusAreasSection onOpenQuote={() => setQuoteModalOpen(true)} />
 
         {/* 7. Membership / Pricing Section */}
         <MembershipSection />
